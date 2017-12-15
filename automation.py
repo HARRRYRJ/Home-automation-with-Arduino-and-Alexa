@@ -1,3 +1,4 @@
+#motion sensor code
 import RPi.GPIO as GPIO
 import time
 GPIO.setwarnings(False)
