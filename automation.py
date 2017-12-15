@@ -1,8 +1,18 @@
-#motion sensor code
+
 import RPi.GPIO as GPIO
 import time
 GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
+
+#GPIO.setmode(GPIO.BCM)
+
+#light intensity detector
+GPIO.setup(4,GPIO.IN)
+ 
+for i in range(0,5):
+    print GPIO.input(4)
+
+#motion detector sensor
 GPIO.setup(10, GPIO.IN)         #Read output from PIR motion sensor
 GPIO.setup(3, GPIO.OUT)         #LED output pin
 while True:
