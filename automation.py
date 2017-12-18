@@ -14,6 +14,9 @@ while True:
     humidity, temperature = Adafruit_DHT.read_retry(11, 5)
 
     print 'Temp: {0:0.1f} C  Humidity: {1:0.1f} %'.format(temperature, humidity)
+    
+    if (temperature>25):
+        GPIO.output(relay1, 1)#turn fan on
 
 #light intensity detector
 GPIO.setup(4,GPIO.IN)
